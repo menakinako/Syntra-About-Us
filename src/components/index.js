@@ -1,0 +1,5 @@
+export {default as Navbar} from './navbar'
+export {default as Body1} from './body1'
+export {default as Body2} from './body2'
+export {default as Body3} from './body3'
+export {default as Footer} from './footer'

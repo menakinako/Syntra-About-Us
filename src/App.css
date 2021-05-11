@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section{
+  position: relative;
+  width:100%;
+  height:100vh;
+  background: linear-gradient(to right, #594dc7 , #387dff) ;
+  overflow: hidden;
+}
+.section .wave{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(wave.png);
+  background-size: 1000px 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.section .wave.wave1{
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay:0s;
+  bottom: 0;
+}
+
+.section .wave.wave2{
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay:-5s;
+  bottom: 10px;
+}
+.section .wave.wave3{
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay:-2s;
+  bottom: 15px;
+}
+.section .wave.wave4{
+  animation: animate2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay:-5s;
+  bottom: 20px;
+}
+@keyframes animate{
+
+0%{
+  background-position-x: 0;
+}
+100%{
+  background-position-x: 1000px;
+ 
+}
+}
+@keyframes animate2{
+
+  0%{
+    background-position-x: 0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  100%{
+    background-position-x: -1000px;
+   
   }
-  to {
-    transform: rotate(360deg);
   }
-}
+  .section .waves{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    transform: rotate(180deg);
+    background-size: 1000px 100px;
+  }
+  
+  .section .waves.wave1{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay:0s;
+    
+    top:0;
+   
+  }
+  
+  .section .waves.wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay:-5s;
+    
+    top:10px;
+    
+  }
+  .section .waves.wave3{
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay:-2s;
+    
+    top:15px;
+    
+  }
+  .section .waves.wave4{
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay:-5s;
+    
+    top:20px;
+  }
+  @keyframes animate{
+  
+  0%{
+    background-position-x: 0;
+    
+   
+  }
+  100%{
+    background-position-x: 1000px;
+   
+   
+  }
+  }
+  @keyframes animate2{
+  
+    0%{
+      background-position-x: 0;
+    }
+    100%{
+      background-position-x: -1000px;
+     
+    }
+    }
+    .curved {
+      padding:11% 0; /* The padding is the area for the shapes, adjust it based on the ratio of the shape*/
+      height:200px; /* to illustrate the space for the content */
+      background:
+        url(https://i.stack.imgur.com/mG3Vb.png) top   /100% auto,
+        url(https://i.stack.imgur.com/JSEyE.png) bottom/100% auto,
+        linear-gradient(#387dff,#387dff) content-box; /* Color between the shapes only on the content and not the padding*/
+      background-repeat:no-repeat;
+      display: flex;
+      justify-content: space-around;
+    }
+    .circle{
+      display: block;
+    }
+
+    
+      
